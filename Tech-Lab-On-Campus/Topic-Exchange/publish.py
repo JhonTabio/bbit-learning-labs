@@ -27,7 +27,7 @@ def main(ticker: str, price: float, sector: str) -> None:
 
     print(ticker, price, sector)
 
-    routingKey = "#." + ticker + ".#"
+    routingKey = "#." + sector + ".#"
     producer = mqProducer(routing_key=routingKey,exchange_name="Tech Lab Topic Exchange")
 
 
